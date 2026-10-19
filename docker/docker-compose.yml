@@ -72,8 +72,7 @@ services:
       bash -c "
       echo waiting for iiw-book-agent ...;
       sleep 5;
-      $${STI_SCRIPTS_PATH}/run;"
-    volumes:
+      $${STI_SCRIPTS_PATH}djfarrellylumes:
       - ../src:/app
 
   iiw-book-postgres:
@@ -85,7 +84,7 @@ services:
       POSTGRES_PASSWORD: password
 
   maildev:
-    image: djfarrelly/maildev
+    image: djdjango/maildev
     ports:
       - "7050:80"
 
